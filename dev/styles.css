@@ -1,0 +1,36 @@
+body {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  header {
+    background-color: #f7f7f7;
+  }
+  
+  section {
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+  
+  h2 {
+    color: #000;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+  
+  img {
+    max-width: 40px;
+    height: 40px;
+  }
