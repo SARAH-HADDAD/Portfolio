@@ -1,0 +1,80 @@
+:root {
+  --Primary: #bb86fc;
+  --PrimaryVariant: #3700b3;
+  --Secondary: #03dac6;
+  --Background: #121212;
+  --Error: #cf6679;
+  --on: #ffffff;
+  --on-medium: rgba(255, 255, 255, 0.60);
+  /*========== Font and typography ==========*/
+
+  /* Define the body font */
+  --body-font: "Poppins", sans-serif;
+
+  /* Define font sizes */
+  /*--big-font-size: 2rem;*/
+  --h1-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+}
+
+h1 {
+    font-size: var(--h1-font-size);
+    font-family: Roboto Mono;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+h2 {
+  font-size: var(--h2-font-size);
+  font-family: Roboto Mono;
+}  
+
+h3 {
+    font-size: var(--h3-font-size);
+    font-family: Roboto Mono;
+  }
+  
+p {
+  font-size: var(--normal-font-size);
+  color: var(--on-medium);
+}
+body {
+  background-color: var(--Background);
+  color: var(--on);
+}
+*{
+    margin-left:  20px; 
+    margin-right:  20px; 
+}
+/* Style the navigation menu */
+@media screen and (max-width: 767px) {
+    .nav__menu{
+        position: fixed;
+        bottom:-100%;
+        left: 0;
+        width: 100%;
+        padding: 2rem 1.5rem 4rem;
+        box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
+        border-radius: 1.5rem 1.5rem 0 0;
+        transition: .3s;
+    }
+}
+.nav__list{
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+.nav__link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--small-font-size);
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+.nav__link:hover{
+    color: var(--Primary);
+}
