@@ -1,18 +1,15 @@
 :root {
+  /*========== Colors ==========*/
   --Primary: #bb86fc;
   --PrimaryVariant: #3700b3;
   --Secondary: #03dac6;
   --Background: #121212;
   --Error: #cf6679;
   --on: #ffffff;
-  --on-medium: rgba(255, 255, 255, 0.60);
+  --on-medium: rgba(255, 255, 255, 0.6);
   /*========== Font and typography ==========*/
-
-  /* Define the body font */
   --body-font: "Poppins", sans-serif;
-
-  /* Define font sizes */
-  /*--big-font-size: 2rem;*/
+  /*========== Font weight ==========*/
   --h1-font-size: 2rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1.125rem;
@@ -22,22 +19,22 @@
 }
 
 h1 {
-    font-size: var(--h1-font-size);
-    font-family: Roboto Mono;
-    font-style: normal;
-    font-weight: 700;
-  }
+  font-size: var(--h1-font-size);
+  font-family: Roboto Mono;
+  font-style: normal;
+  font-weight: 700;
+}
 
 h2 {
   font-size: var(--h2-font-size);
   font-family: Roboto Mono;
-}  
+}
 
 h3 {
-    font-size: var(--h3-font-size);
-    font-family: Roboto Mono;
-  }
-  
+  font-size: var(--h3-font-size);
+  font-family: Roboto Mono;
+}
+
 p {
   font-size: var(--normal-font-size);
   color: var(--on-medium);
@@ -45,36 +42,86 @@ p {
 body {
   background-color: var(--Background);
   color: var(--on);
+  margin-left: 20px;
+  margin-right: 20px;
 }
-*{
-    margin-left:  20px; 
-    margin-right:  20px; 
+html {
+  scroll-behavior: smooth;
 }
-/* Style the navigation menu */
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+/*==================== LAYOUT ====================*/
+
+header {
+  top: 0;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  z-index: 100;
+  background-color: var(--Background);
+}
+/*==================== NAV ====================*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 @media screen and (max-width: 767px) {
-    .nav__menu{
-        position: fixed;
-        bottom:-100%;
-        left: 0;
-        width: 100%;
-        padding: 2rem 1.5rem 4rem;
-        box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
-        border-radius: 1.5rem 1.5rem 0 0;
-        transition: .3s;
-    }
+  .nav__menu {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--body-color);
+    padding: 2rem 1.5rem 4rem;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 1.5rem 1.5rem 0 0;
+    transition: 0.3s;
+  }
 }
-.nav__list{
-    grid-template-columns: repeat(3,1fr);
-    gap: 2rem;
+.nav__link {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
 }
-.nav__link{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: var(--small-font-size);
-    color: var(--title-color);
-    font-weight: var(--font-medium);
+.nav__link:hover {
+  color: var(--Primary);
 }
-.nav__link:hover{
-    color: var(--Primary);
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-block-start: 2em;
+  margin-block-end: 2em;
+  margin-inline-end: 1em;
 }
+.nav__item {
+  margin: 0 1rem;
+}
+.nav__link:after {
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+.scroll-header {
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+}
+/* show menu */
+.show-menu {
+  bottom: 0;
+}
+/*==================== HOME ====================*/
+section {
+  margin-top: 5em;
+}
+/*==================== REUSABLE CSS CLASSES ====================*/
