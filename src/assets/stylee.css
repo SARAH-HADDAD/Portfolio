@@ -9,33 +9,35 @@
   --on-medium: rgba(255, 255, 255, 0.6);
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
-  /*========== Font weight ==========*/
-  --h1-font-size: 2rem;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1.125rem;
-  --normal-font-size: 0.938rem;
-  --small-font-size: 0.813rem;
+  --h1-font-size: 3rem;
+  --h2-font-size: 2rem;
+  --h3-font-size: 1.3rem;
+  --h4-font-size: 1.25rem;
+  --h5-font-size: 1rem;
+  --normal-font-size: 0.9rem;
+  --small-font-size: 0.8rem;
   --smaller-font-size: 0.75rem;
 }
 
 h1 {
   font-size: var(--h1-font-size);
-  font-family: Roboto Mono;
+  font-family: "Roboto Mono", sans-serif;
   font-style: normal;
   font-weight: 700;
 }
 
 h2 {
   font-size: var(--h2-font-size);
-  font-family: Roboto Mono;
+  font-family: "Roboto Mono", sans-serif;
 }
 
 h3 {
   font-size: var(--h3-font-size);
-  font-family: Roboto Mono;
+  font-family: "Roboto Mono", sans-serif;
 }
 
 p {
+  font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--on-medium);
 }
