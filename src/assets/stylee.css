@@ -8,6 +8,8 @@
   --on: #ffffff;
   --on-medium: rgba(255, 255, 255, 0.6);
   --hover-color: rgba(187, 134, 252, 0.12);
+  --Bar: rgba(187, 134, 252, 0.5);
+
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
   --font1: "Roboto Mono", sans-serif;
@@ -224,3 +226,51 @@ button:focus {
   transition: 0.4s;
 }
 /* The percentage of every skill */
+.skills__titles {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--mb-0-5);
+  align-items: baseline;
+}
+.skills__name {
+margin: 0;
+padding: 0;
+}
+.skills__bar,
+.skills__percentage {
+  height: 5px;
+  border-radius: 0.25rem;
+}
+.skills__bar {
+  background-color: var(--Bar);
+
+}
+.skills__percentage {
+  display: block;
+  background-color: var(--Primary);
+
+}
+.number40{
+  width: 40%;
+}
+.number35{
+  width: 35%;
+}
+.number45{
+  width: 45%;
+}
+.number50{
+  width: 50%;
+}
+.number60{
+  width: 60%;
+}
+.number70{
+  width: 70%;
+}
+.number20{
+  width: 20%;
+}
+.number30{
+  width: 30%;
+}
