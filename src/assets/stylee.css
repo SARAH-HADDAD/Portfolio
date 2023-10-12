@@ -7,10 +7,10 @@
   --Error: #cf6679;
   --on: #ffffff;
   --on-medium: rgba(255, 255, 255, 0.6);
-  --hover-color:rgba(187, 134, 252, 0.12);
+  --hover-color: rgba(187, 134, 252, 0.12);
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
-  --font1:"Roboto Mono", sans-serif;
+  --font1: "Roboto Mono", sans-serif;
   --h1-font-size: 3rem;
   --h2-font-size: 2rem;
   --h3-font-size: 1.3rem;
@@ -24,7 +24,9 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 h1 {
@@ -53,7 +55,6 @@ p {
 body {
   background-color: var(--Background);
   color: var(--on);
-
 }
 ul {
   list-style: none;
@@ -137,9 +138,12 @@ nav {
   bottom: 0;
 }
 /*==================== HOME ====================*/
+
 button {
   border-radius: 5px;
-  box-shadow: 0px 28.39534px 38.72092px 0px rgba(0, 0, 0, 0.20), 0px 23.23255px 118.74416px 0px rgba(0, 0, 0, 0.12), 0px 61.95348px 98.09301px 0px rgba(0, 0, 0, 0.14);
+  box-shadow: 0px 28.39534px 38.72092px 0px rgba(0, 0, 0, 0.2),
+    0px 23.23255px 118.74416px 0px rgba(0, 0, 0, 0.12),
+    0px 61.95348px 98.09301px 0px rgba(0, 0, 0, 0.14);
   border: 1px solid rgba(255, 255, 255, 0.12);
   margin-top: 2rem;
   margin-right: 20px;
@@ -148,29 +152,27 @@ button {
   transition: 0.3s linear;
   color: var(--Primary);
   text-transform: uppercase;
-  font-family:var(--font1) ;
+  font-family: var(--font1);
   font-size: 1rem;
   font-weight: 400;
 }
 
-button:hover, 
-button:focus
-{
+button:hover,
+button:focus {
   cursor: pointer;
-  background:var(--hover-color);
+  background: var(--hover-color);
 }
 section {
   margin-left: 2rem;
   margin-right: 2rem;
+  padding-top: 15rem;
+  padding-bottom: 5rem;
 }
-#noPadP, #noPadH {
+#noPadP,
+#noPadH {
   margin: 0;
   padding: 0;
 }
-.Green{
+.Green {
   color: var(--Secondary);
 }
-.start{
-  margin-top: 15rem;
-}
-
