@@ -64,9 +64,9 @@ a {
   text-decoration: none;
 }
 section {
+  padding-top: 10rem;
   margin-left: 2rem;
   margin-right: 2rem;
-  padding-top: 15rem;
 }
 .section__title,.section__subtitle{
   text-align: center;
@@ -149,6 +149,10 @@ nav {
   bottom: 0;
 }
 /*==================== HOME ====================*/
+#home{
+  padding-top: 15rem;
+  margin-bottom: 10rem;
+}
 
 button {
   border-radius: 5px;
@@ -184,9 +188,10 @@ button:focus {
 /*==================== SKILLS ====================*/
 
 .skills__container{
+  margin-top:10rem;
   justify-content: center;
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 30px;
   grid-template-columns: 30% 30% 30%;
 
 }
@@ -213,5 +218,9 @@ button:focus {
 
 .skills__open .skills__arrow{
   transform: rotate(-180deg);
+}
+.skills__arrow {
+  margin-left: auto;
+  transition: 0.4s;
 }
 /* The percentage of every skill */
