@@ -63,6 +63,17 @@ ul {
 a {
   text-decoration: none;
 }
+section {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding-top: 15rem;
+}
+.section__title,.section__subtitle{
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
 /*==================== LAYOUT ====================*/
 
 header {
@@ -162,12 +173,6 @@ button:focus {
   cursor: pointer;
   background: var(--hover-color);
 }
-section {
-  margin-left: 2rem;
-  margin-right: 2rem;
-  padding-top: 15rem;
-  padding-bottom: 5rem;
-}
 #noPadP,
 #noPadH {
   margin: 0;
@@ -176,3 +181,37 @@ section {
 .Green {
   color: var(--Secondary);
 }
+/*==================== SKILLS ====================*/
+
+.skills__container{
+  justify-content: center;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 30% 30% 30%;
+
+}
+.skills__header{
+  display: flex;
+  cursor: pointer;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+.info h3, .info p{
+  margin: 0;
+  padding: 0;
+}
+.skills__close .skills__list{
+  height: 0;
+  overflow: hidden;
+}
+
+.skills__open .skills__list{
+  height: max-content;
+  margin-bottom: var(--mb-2-5);
+}
+
+.skills__open .skills__arrow{
+  transform: rotate(-180deg);
+}
+/* The percentage of every skill */
