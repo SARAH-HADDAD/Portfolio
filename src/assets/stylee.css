@@ -48,12 +48,12 @@ p {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--on-medium);
+  line-height: 2;
 }
 body {
   background-color: var(--Background);
   color: var(--on);
-  margin-left: 20px;
-  margin-right: 20px;
+
 }
 ul {
   list-style: none;
@@ -106,6 +106,9 @@ nav {
 .nav__link:hover {
   color: var(--Primary);
 }
+.nav__link:active {
+  color: var(--Primary);
+}
 .nav__list {
   display: flex;
   flex-direction: row;
@@ -116,6 +119,12 @@ nav {
 }
 .nav__item {
   margin: 0 1rem;
+}
+.nav__logo {
+  margin-left: 2rem;
+  flex: display;
+  color: var(--Primary);
+  font-family: var(--font1);
 }
 .nav__link:after {
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
@@ -132,14 +141,16 @@ button {
   border-radius: 5px;
   box-shadow: 0px 28.39534px 38.72092px 0px rgba(0, 0, 0, 0.20), 0px 23.23255px 118.74416px 0px rgba(0, 0, 0, 0.12), 0px 61.95348px 98.09301px 0px rgba(0, 0, 0, 0.14);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  margin: 5px;
-  padding: 5px 10px;
+  margin-top: 2rem;
+  margin-right: 20px;
+  padding: 5px 15px;
   background: var(--Background);
   transition: 0.3s linear;
   color: var(--Primary);
   text-transform: uppercase;
   font-family:var(--font1) ;
   font-size: 1rem;
+  font-weight: 400;
 }
 
 button:hover, 
@@ -149,9 +160,8 @@ button:focus
   background:var(--hover-color);
 }
 section {
-  margin-top: 10em;
-  margin-left: 2em;
-  margin-right: 2em;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 #noPadP, #noPadH {
   margin: 0;
@@ -159,5 +169,8 @@ section {
 }
 .Green{
   color: var(--Secondary);
+}
+.start{
+  margin-top: 15rem;
 }
 
