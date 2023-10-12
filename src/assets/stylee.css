@@ -7,8 +7,10 @@
   --Error: #cf6679;
   --on: #ffffff;
   --on-medium: rgba(255, 255, 255, 0.6);
+  --hover-color:rgba(187, 134, 252, 0.12);
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
+  --font1:"Roboto Mono", sans-serif;
   --h1-font-size: 3rem;
   --h2-font-size: 2rem;
   --h3-font-size: 1.3rem;
@@ -18,7 +20,13 @@
   --small-font-size: 0.8rem;
   --smaller-font-size: 0.75rem;
 }
-
+/*==================== REUSABLE CSS CLASSES ====================*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 h1 {
   font-size: var(--h1-font-size);
   font-family: "Roboto Mono", sans-serif;
@@ -46,9 +54,6 @@ body {
   color: var(--on);
   margin-left: 20px;
   margin-right: 20px;
-}
-html {
-  scroll-behavior: smooth;
 }
 ul {
   list-style: none;
@@ -83,7 +88,7 @@ nav {
     padding: 2rem 1.5rem 4rem;
     box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
     border-radius: 1.5rem 1.5rem 0 0;
-    transition: 0.3s;
+    transition: 0.3s linear;
   }
 }
 .nav__link {
@@ -123,7 +128,36 @@ nav {
   bottom: 0;
 }
 /*==================== HOME ====================*/
-section {
-  margin-top: 5em;
+button {
+  border-radius: 5px;
+  box-shadow: 0px 28.39534px 38.72092px 0px rgba(0, 0, 0, 0.20), 0px 23.23255px 118.74416px 0px rgba(0, 0, 0, 0.12), 0px 61.95348px 98.09301px 0px rgba(0, 0, 0, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  margin: 5px;
+  padding: 5px 10px;
+  background: var(--Background);
+  transition: 0.3s linear;
+  color: var(--Primary);
+  text-transform: uppercase;
+  font-family:var(--font1) ;
+  font-size: 1rem;
 }
-/*==================== REUSABLE CSS CLASSES ====================*/
+
+button:hover, 
+button:focus
+{
+  cursor: pointer;
+  background:var(--hover-color);
+}
+section {
+  margin-top: 10em;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+#noPadP, #noPadH {
+  margin: 0;
+  padding: 0;
+}
+.Green{
+  color: var(--Secondary);
+}
+
