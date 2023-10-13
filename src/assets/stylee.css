@@ -287,8 +287,9 @@ padding: 0;
 }
 .path__tabs{
   display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 2rem;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
 .path__button{
