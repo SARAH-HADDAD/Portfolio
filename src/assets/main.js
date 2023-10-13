@@ -17,3 +17,24 @@ function toggleSkills() {
 skillsHeader.forEach((el) => {
   el.addEventListener("click", toggleSkills);
 });
+
+/*==================== Path TABS ====================*/
+
+const tabs = document.querySelectorAll("[data-target]"),
+  tabContents = document.querySelectorAll("[data-content]");
+
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const target = document.querySelector(tab.dataset.target);
+
+    tabContents.forEach((tabContent) => {
+      tabContent.classList.remove("path__active");
+    });
+    target.classList.add("path__active");
+
+    tabs.forEach((tab) => {
+      tab.classList.remove("path__active");
+    });
+    tab.classList.add("path__active");
+  });
+});

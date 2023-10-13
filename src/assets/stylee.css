@@ -9,6 +9,8 @@
   --on-medium: rgba(255, 255, 255, 0.6);
   --hover-color: rgba(187, 134, 252, 0.12);
   --Bar: rgba(187, 134, 252, 0.5);
+  --SecondaryBar: rgba(3, 218, 198, 0.5);
+  --Disabled: rgba(255, 255, 255, 0.38);
 
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
@@ -74,6 +76,11 @@ section {
   text-align: center;
   padding: 0;
   margin: 0;
+}
+.sectionbar{
+  height: 5px;
+  border-radius: 0.25rem;
+  background-color: var(--SecondaryBar);
 }
 
 /*==================== LAYOUT ====================*/
@@ -195,7 +202,6 @@ button:focus {
   display: grid;
   grid-gap: 30px;
   grid-template-columns: 30% 30% 30%;
-
 }
 .skills__header{
   display: flex;
@@ -215,7 +221,7 @@ button:focus {
 
 .skills__open .skills__list{
   height: max-content;
-  margin-bottom: var(--mb-2-5);
+  margin-bottom: 2rem;
 }
 
 .skills__open .skills__arrow{
@@ -273,4 +279,80 @@ padding: 0;
 }
 .number30{
   width: 30%;
+}
+/*==================== Path ====================*/
+.button--flex {
+  display: inline-flex;
+  align-items: center;
+}
+.path__tabs{
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+}
+
+.path__button{
+  cursor: pointer;
+}
+
+.path__button:hover{
+  color: var(--Primary);
+}
+
+
+.path__data{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.path__calendar{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.path__calendar i{
+margin-right: 10px;
+}
+
+.path__rounder{
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  background-color: var(--Primary);
+  border-radius: 50%;
+}
+
+.path__line{
+  display: block;
+  width: 1px;
+  height: 100%;
+  background-color: var(--Primary);
+  transform: translate(6px,-7px);
+}
+
+.path [data-content]{
+  display: none;
+}
+
+.path__active[data-content]{
+  display: block;
+}
+.path__button{
+  color: var(--Disabled);
+}
+.path__section{
+  color: var(--Disabled);
+}
+.path__button.path__active{
+  color: var(--Primary);
+}
+.path__active.path__section{
+  color: var(--Primary);
+}
+.path__active.path__icon{
+  color: var(--Primary);
+}
+.path__icon{
+  margin-right: 10px;
 }
