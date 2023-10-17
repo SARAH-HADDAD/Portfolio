@@ -38,3 +38,4 @@ tabs.forEach((tab) => {
     tab.classList.add("path__active");
   });
 });
+

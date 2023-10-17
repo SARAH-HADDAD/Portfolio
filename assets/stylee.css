@@ -102,7 +102,13 @@ header {
   z-index: 100;
   background-color: var(--Background);
 }
-
+.container{
+  max-width: 768px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 /*==================== NAV ====================*/
 nav {
   display: flex;
@@ -282,13 +288,11 @@ button:focus {
 
 .skills__bar {
   background-color: var(--Bar);
-
 }
 
 .skills__percentage {
   display: block;
   background-color: var(--Primary);
-
 }
 
 .number40 {
@@ -337,15 +341,12 @@ button:focus {
   gap: 2rem;
 }
 
-
 .path__data {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
-
 }
-
 
 .path__calendar {
   display: flex;
@@ -384,10 +385,10 @@ button:focus {
 .path__section {
   color: var(--Disabled);
 }
-.path__icon path{
+.path__icon path {
   fill: var(--Disabled);
 }
-.path__button{
+.path__button {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -399,12 +400,11 @@ button:focus {
   fill: var(--Primary);
 }
 
-
-.path__button{
+.path__button {
   cursor: pointer;
 }
 
-.path__button:hover{
+.path__button:hover {
   color: var(--Primary);
 }
 
@@ -417,7 +417,6 @@ button:focus {
 }
 
 .path__content.path__active {
-
   display: grid;
   grid-template-columns: 1fr 10px 1fr;
   grid-column-gap: 2rem;
@@ -442,4 +441,76 @@ button:focus {
   margin-top: 2rem;
   display: grid;
   justify-content: center;
+}
+
+/*==================== PROJECTS ====================*/
+/* Slideshow container */
+.slideshow-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+img {
+  vertical-align: middle;
+  box-sizing: border-box;
+  width: 500px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
