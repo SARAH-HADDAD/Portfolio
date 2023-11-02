@@ -455,7 +455,7 @@ button:focus {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   margin: 5%;
 }
 /* Hide the images by default */
@@ -465,7 +465,9 @@ button:focus {
 img {
   vertical-align: middle;
   box-sizing: border-box;
-  width: 500px;
+  width: 700px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 /* Next & previous buttons */
@@ -519,6 +521,55 @@ img {
     opacity: 1;
   }
 }
+
+.image {
+	position: relative;
+	width: 700px;
+}
+
+.image__img {
+	display: block;
+	width: 100%;
+}
+
+.image__overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	color: #ffffff;
+	font-family: 'Quicksand', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.25s;
+}
+
+.image__overlay--blur {
+	backdrop-filter: blur(5px);
+}
+
+.image__overlay--primary {
+	background: #009578;
+}
+
+.image__overlay>* {
+	transform: translateY(20px);
+	transition: transform 0.25s;
+}
+
+.image__overlay:hover {
+	opacity: 1;
+}
+
+.image__overlay:hover>* {
+	transform: translateY(0);
+}
+
 
 /* FOOTER SECTION */
 

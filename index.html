@@ -635,14 +635,27 @@
         <div>
           <!-- project 1 -->
           <div class="mySlides fade">
-            <img src="assets/images/image1.png" alt="project1" class="project__img">
+            <div class="image">
+              <img class="image__img" src="assets/images/project/image1.png" alt="Project1">
+              <div class="image__overlay">
+                <div>Portolio</div>
+                <p>My portfolio is one of the projects I've created. The website showcases an appealing and user- friendly design, emphasizing my achievements, qualifications, and expertise.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- project 2 -->
+          <div class="mySlides fade">
+            <div class="image">
+              <img class="image__img" src="assets/images/project/image1.png" alt="Project1">
+              <div class="image__overlay">
+                <div class="image__title">Bricks</div>
+                <p class="image__description">Here we have a brick wall.</p>
+              </div>
+            </div>
           </div>
         </div>
-        <!-- project 2 -->
-        <div class="mySlides fade">
-          <img src="assets/images/image1.png" alt="project1" class="project__img">
-        </div>
-
         <a class="next" onclick="plusSlides(1)">
           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="45" viewBox="0 0 101 151" fill="none">
             <path
@@ -650,15 +663,13 @@
               fill="#BC86F8" />
           </svg>
         </a>
+
       </div>
-
-
-    </div>
-    <!-- The dots/circles -->
-    <div style="text-align:center">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-    </div>
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+      </div>
     </div>
   </section>
 
@@ -669,8 +680,11 @@
   </section>
 
   <!-- Contact Page -->
-  <footer>
-  </footer>
+  <section id="contact">
+    <h2>Contact me</h2>
+    <p>Email: <a href="mailto:sarah@example.com">sarah@example.com</a></p>
+  </section>
+  <footer>Designed and built by Sarah Haddad.</footer>
   <!--==================== MAIN JS ====================-->
   <script src="assets/main.js"></script>
   <script>
