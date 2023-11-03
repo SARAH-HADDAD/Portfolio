@@ -52,7 +52,7 @@
     <h1 id="noPadH">Sarah Haddad</h1>
     <h2>
       <span class="Green">&lt;/</span>
-      I am a Visual Computing student
+      I'm a <span id='typeit-quote'></span>
       <span class="Green">&gt;</span>
     </h2>
     <p>
@@ -62,7 +62,7 @@
       and create innovative solutions in the field of visual computing.
     </p>
     <button id="ContactME">Contact me</button>
-    <button id="DownlowdCV">Downlowd CV</button>
+    <button id="DownlowdCV">Download CV</button>
   </section>
 
   <!-- Skills Page -->
@@ -787,7 +787,7 @@
                         fill="#BC86F8" />
                     </svg>
                   </a>
-                  
+
                 </div>
               </div>
             </div>
@@ -952,6 +952,19 @@
   <footer>Designed and built by Sarah Haddad.</footer>
   <!--==================== MAIN JS ====================-->
   <script src="assets/main.js"></script>
+  <script src='https://cdn.jsdelivr.net/npm/typed.js@2.0.11'></script>
+  <script>
+    const typed = new Typed('#typeit-quote', {
+      strings: ['a Visual Computing Student', 'an AI Enthusiast', 'a Computer Vision Enthusiast', 'a Front-End Developer', 'a Game Developer', 'a Mobile Developer', 'a Designer', 'a Painter'],
+      typeSpeed: 50,
+      smartBackspace: true,
+      backSpeed: 35,
+      backDelay: 1000,
+      cursorChar: '&#x25AE;',
+      loop: true,
+      loopCount: Infinity,
+    });
+  </script>
   <script>
     let slideIndex = 1;
     showSlides(slideIndex);
