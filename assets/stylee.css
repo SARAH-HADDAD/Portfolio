@@ -471,13 +471,7 @@ button:focus {
   display: none;
 }
 
-img {
-  vertical-align: middle;
-  box-sizing: border-box;
-  width: 700px;
-  padding-left: 50px;
-  padding-right: 50px;
-}
+
 
 /* Next & previous buttons */
 .prev,
@@ -505,7 +499,7 @@ img {
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: #717171;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -513,9 +507,9 @@ img {
 
 .active,
 .dot:hover {
-  background-color: #717171;
+  background-color:var(--Primary) ;
 }
-
+/*  #bbb */
 /* Fading animation */
 .fade {
   animation-name: fade;
