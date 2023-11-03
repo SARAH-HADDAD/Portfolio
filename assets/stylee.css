@@ -524,7 +524,7 @@ img {
 
 .image {
 	position: relative;
-	width: 700px;
+	width: 45rem;
 }
 
 .image__img {
@@ -553,10 +553,6 @@ img {
 	backdrop-filter: blur(5px);
 }
 
-.image__overlay--primary {
-	background: #009578;
-}
-
 .image__overlay>* {
 	transform: translateY(20px);
 	transition: transform 0.25s;
@@ -570,6 +566,14 @@ img {
 	transform: translateY(0);
 }
 
+.my_project{
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
 
+.project_info{
+padding-left:5rem ;
+padding-right:5rem ;
+}
 /* FOOTER SECTION */
 
