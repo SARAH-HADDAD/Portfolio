@@ -18,7 +18,7 @@
     <nav>
       <a href="#" class="nav__logo">
         <span class="Green">&lt;/</span>
-        <span>Sarah Haddad</span>
+        <span id="typeit-quote-head">Sarah Haddad</span>
         <span class="Green">&gt;</span>
       </a>
       <div id="nav-menu">
@@ -1017,6 +1017,18 @@
       loopCount: Infinity,
     });
   </script>
+    <script>
+      const typedE = new Typed('#typeit-quote-head', {
+        strings: ['Sarah Haddad', ''],
+        typeSpeed: 10,
+        smartBackspace: true,
+        backSpeed: 1000,
+        backDelay: 5000,
+        cursorChar: '&#x25AE;',
+        loop: true,
+        loopCount: Infinity,
+      });
+    </script>
   <script>
     let slideIndex = 1;
     showSlides(slideIndex);

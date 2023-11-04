@@ -703,7 +703,7 @@ footer{
   text-transform: uppercase;
   border-radius: 25px;
   color: #121212;
-  background-color:var(--Secondary);
+  background-color:var(--Primary);
   border: 0;
 }
 
@@ -741,7 +741,6 @@ footer{
   justify-content: center;
   background-color: #121212;
   border-radius: 50%;
-  color: #541b96;
 }
 
 @media screen and (min-width: 1200px){
@@ -755,7 +754,6 @@ footer{
 .footer-social svg{
   height: 90%;
   width: 90%;
-  color: blue;
   left: 0;
   top: 0;
 }
