@@ -581,27 +581,20 @@ button:focus {
   padding-right: 5rem;
 }
 
-/* FOOTER SECTION */
 
-footer {
-  position: relative;
-}
 
-.svg-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  bottom: 0;
+/* Footer Styling */
+footer#footer .inner {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: left top;
+  background-image: url('assets/images/footerb.png');
+  }
 
-  overflow: hidden;
 
-  z-index: -1;
-  /* Place the SVG behind other content */
-}
-
-/* Style the text and other content as needed */
-.footer-text {
-  padding: 20px;
+/* Style the footer paragraph (you can add more styles as needed) */
+footer p {
+  font-size: 14px;
+  margin: 0;
 }
