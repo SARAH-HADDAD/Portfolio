@@ -507,8 +507,9 @@ button:focus {
 
 .active,
 .dot:hover {
-  background-color:var(--Primary) ;
+  background-color: var(--Primary);
 }
+
 /*  #bbb */
 /* Fading animation */
 .fade {
@@ -581,3 +582,26 @@ button:focus {
 }
 
 /* FOOTER SECTION */
+
+footer {
+  position: relative;
+}
+
+.svg-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+
+  overflow: hidden;
+
+  z-index: -1;
+  /* Place the SVG behind other content */
+}
+
+/* Style the text and other content as needed */
+.footer-text {
+  padding: 20px;
+}
