@@ -655,36 +655,21 @@ footer{
 }
 
 .footer-text{
-  max-width: 280px;
   margin: 0 auto;
   text-align: center;
 }
 
-@media screen and (min-width: 768px){
-  .footer-text{
-    max-width: 100%;
-  }
-}
 
-.footer-container .container .footer-text p{
-  margin: 0;
-  /*
-    --body-font: "Poppins", sans-serif;
-  --font1: "Roboto Mono", sans-serif;
-  */
-  font-family: 'Playfair Display' ,serif;
+
+.footer-container .container .footer-text h2{
+  padding: 0;
+  font-family: var( --font1);
   font-weight: 600;
-  font-size: 28px;
-  line-height: 1.358;
-  letter-spacing: 1.88px;
+  font-size: 1rem;
   color: #fff;
+  max-width: 100%;
 }
 
-@media screen and (min-width: 1200px){
-  .footer-container .container .footer-text p{
-    font-size: 50px;
-  }
-}
 
 .footer-text button{
   width: 220px;
