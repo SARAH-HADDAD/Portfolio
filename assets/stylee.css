@@ -471,9 +471,84 @@ button:focus {
   display: none;
 }
 
+.certificationSlides {
+  display: none;
+}
+
+/* Certification Page Specific Styles */
+#certification .slideshow-container {
+  position: relative;
+  max-width: 100%; /* Adjust as necessary */
+  margin: auto;
+}
+
+/* Position the previous and next buttons within the certification section */
+#certification .certification-slides {
+  position: relative;
+}
+
+/* Style for the previous and next buttons */
+#certification .prev, #certification .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+/* Position previous button to the left */
+#certification .prev {
+  left: -100px; /* Adjust this value to move the button out of the image area */
+}
+
+/* Position next button to the right */
+#certification .next {
+  right: -100px; /* Adjust this value to move the button out of the image area */
+}
 
 
-/* Next & previous buttons */
+#certification .section__subtitle {
+  margin-bottom: 1.5rem; /* Adjust the space below the title and subtitle */
+}
+
+/* Slideshow container */
+#certification .slideshow-container {
+  margin-bottom: 1.5rem; /* Adjust the space below the slider */
+}
+
+/* Dots spacing */
+#certification .slideshow-container > div:last-child {
+  margin-top: 1rem; /* Adjust the space above the dots */
+}
+
+/* Adjusting padding for the slider container to maintain overall spacing */
+#certification .slides {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 0 1rem; /* Add padding to the slides container if needed */
+}
+
+
+#certification .slides {
+  position: relative;
+  width: 100%;
+  height: auto; /* Adjust based on the images */
+  overflow: hidden;
+}
+
+
+#certification .image__img {
+  width: 100%;
+  height: auto; 
+}
+
+
+
 .prev,
 .next {
   padding: 15px;
