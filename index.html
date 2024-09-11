@@ -1155,6 +1155,25 @@
     </div>
   </footer>
 
+<!-- Contact Form Modal -->
+<div id="contactFormModal" class="modal">
+  <div class="modal-content">
+    <span class="close-button" id="closeModal">&times;</span>
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</div>
 
   <!-- footer>Designed and built by Sarah Haddad.</footer -->
   <!--==================== MAIN JS ====================-->
@@ -1162,7 +1181,7 @@
   <script src='https://cdn.jsdelivr.net/npm/typed.js@2.0.11'></script>
   <script>
     const typed = new Typed('#typeit-quote', {
-      strings: ['a Computer Vision Engineer', 'an AI Enthusiast', 'a Front-End Developer', 'a Game Developer', 'a Mobile Developer', 'a Designer', 'a Painter'],
+      strings: ['a Computer Vision Engineer', 'an AI Enthusiast', 'a Front-End Developer', 'a Game Developer', 'a Mobile Developer', 'a Designer'],
       typeSpeed: 50,
       smartBackspace: true,
       backSpeed: 35,
@@ -1256,6 +1275,32 @@
     }
 
   </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get modal and buttons
+      var modal = document.getElementById('contactFormModal');
+      var btn = document.querySelector('.footer-btn');
+      var span = document.getElementById('closeModal');
+  
+      // Open the modal
+      btn.onclick = function() {
+        modal.style.display = 'block';
+      }
+  
+      // Close the modal when the user clicks on <span> (x)
+      span.onclick = function() {
+        modal.style.display = 'none';
+      }
+  
+      // Close the modal when the user clicks anywhere outside of the modal
+      window.onclick = function(event) {
+        if (event.target === modal) {
+          modal.style.display = 'none';
+        }
+      }
+    });
+  </script>
+  
 </body>
 
 </html>
