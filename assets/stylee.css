@@ -882,3 +882,9 @@ input:focus, textarea:focus {
   text-decoration: none;
   cursor: pointer;
 }
+/* Align the button to the right */
+#contactForm button {
+  display: block; /* Ensure it's treated as a block-level element */
+  margin-left: auto; /* Push it to the right */
+  margin-right: 0; /* Ensure no margin on the right */
+}

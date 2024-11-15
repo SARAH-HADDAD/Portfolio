@@ -1281,7 +1281,7 @@
     <p>Email: <a href="mailto:sarah@example.com">sarah@example.com</a></p>
   </section> -->
   <footer>
-    <div class="footer-bg">
+    <div class="footer-bg" id="contact">
       <div class="footer-pattern-bg">
         <img src="assets/images/footerb.png" alt="">
       </div>
@@ -1354,7 +1354,7 @@
         <label for="message">Message:</label>
         <textarea id="message" name="message" required placeholder="Your Message"></textarea>
       
-        <button type="submit">Send</button>
+        <button type="submit">Send Message</button>
       </form>
       
     </div>
@@ -1461,33 +1461,40 @@
     }
 
   </script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Get modal and buttons
-      var modal = document.getElementById('contactFormModal');
-      var btn = document.querySelector('.footer-btn');
-      var span = document.getElementById('closeModal');
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Get modal and buttons
+    var modal = document.getElementById('contactFormModal');
+    var btn = document.querySelector('.footer-btn');
+    var contactMeButton = document.getElementById('ContactME');
+    var span = document.getElementById('closeModal');
 
-      // Ensure modal is hidden when the page loads
+    // Ensure modal is hidden when the page loads
+    modal.style.display = 'none';
+
+    // Open the modal when the user clicks the "CONTACT ME!" footer button
+    btn.onclick = function () {
+      modal.style.display = 'block';
+    }
+
+    // Open the modal when the user clicks the new "Contact me" button
+    contactMeButton.onclick = function () {
+      modal.style.display = 'block';
+    }
+
+    // Close the modal when the user clicks on <span> (x)
+    span.onclick = function () {
       modal.style.display = 'none';
+    }
 
-      // Open the modal when the user clicks the "CONTACT ME!" button
-      btn.onclick = function () {
-        modal.style.display = 'block';
-      }
-
-      // Close the modal when the user clicks on <span> (x)
-      span.onclick = function () {
+    // Close the modal when the user clicks anywhere outside of the modal
+    window.onclick = function (event) {
+      if (event.target === modal) {
         modal.style.display = 'none';
       }
-
-      // Close the modal when the user clicks anywhere outside of the modal
-      window.onclick = function (event) {
-        if (event.target === modal) {
-          modal.style.display = 'none';
-        }
-      }
-    });
+    }
+  });
+</script>
 
   </script>
 
