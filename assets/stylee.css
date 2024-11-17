@@ -104,11 +104,12 @@ header {
 }
 
 .container {
-  max-width: 768px;
+  max-width: 1200px;
   margin-left: 2rem;
   margin-right: 2rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  width: 90%;
 }
 
 /*==================== NAV ====================*/
