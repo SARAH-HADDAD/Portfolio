@@ -799,8 +799,15 @@ footer{
   margin-left: 20px;
 }
 
-.social-wrapper-first+.social-wrapper {
-  margin-left: 20px;
+.social-wrapper a:hover svg path {
+  fill: var(--Secondary); /* Change the path fill color */
+  transition: fill 0.3s ease; /* Smooth transition for color change */
+}
+
+/* Optional: Add a slight scale effect on hover */
+.social-wrapper a:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
 
 .footer-container .container .footer-social .social-container .social-wrapper a, .social-wrapper-first a{
