@@ -63,6 +63,11 @@ p {
 body {
   background-color: var(--Background);
   color: var(--on);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 ul {
@@ -75,21 +80,23 @@ a {
 
 section {
   padding-top: 10rem;
-  margin-left: 5rem;
-  margin-right: 5rem;
+  flex:1;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
 .section__title,
 .section__subtitle {
   text-align: center;
   padding: 0;
-  margin: 0;
+  margin-bottom: 0;
 }
 
 .sectionbar {
   height: 5px;
   border-radius: 0.25rem;
   background-color: var(--SecondaryBar);
+  margin: 1rem 0;
 }
 
 /*==================== LAYOUT ====================*/
@@ -101,12 +108,14 @@ header {
   left: 0;
   z-index: 100;
   background-color: var(--Background);
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .container {
   max-width: 1200px;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 1rem;
   padding-right: 1rem;
   width: 90%;
@@ -125,7 +134,7 @@ nav {
     bottom: -100%;
     left: 0;
     width: 100%;
-    background-color: var(--body-color);
+    background-color: var(--Background);
     padding: 2rem 1.5rem 4rem;
     box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
     border-radius: 1.5rem 1.5rem 0 0;
@@ -169,7 +178,6 @@ nav {
 
 .nav__logo {
   margin-left: 2rem;
-  flex: display;
   color: var(--Primary);
   font-family: var(--font1);
 }
@@ -190,6 +198,7 @@ nav {
 /*==================== HOME ====================*/
 #home {
   padding-top: 15rem;
+  padding-left: 3rem;
   margin-bottom: 10rem;
 }
 
@@ -228,9 +237,9 @@ button:focus {
 }
 
 /*==================== SKILLS ====================*/
-
+/* chnage */
 .skills__container {
-  margin-top: 10rem;
+  padding-top: 15px;
   justify-content: center;
   display: grid;
   grid-gap: 30px;
@@ -662,7 +671,7 @@ button:focus {
 footer{
   position: relative;
   height: 50%;
-  padding-top: 30%;
+  padding-top: 20%;
   padding-bottom: 5%;
 }
 
