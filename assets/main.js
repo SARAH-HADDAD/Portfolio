@@ -39,3 +39,11 @@ tabs.forEach((tab) => {
   });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  const toggleButton = document.getElementById('mobile-menu-toggle');
+  const navList = document.querySelector('.nav__list');
+
+  toggleButton.addEventListener('click', function() {
+    navList.classList.toggle('active');
+  });
+});
