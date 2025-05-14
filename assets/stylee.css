@@ -957,3 +957,73 @@ input:focus, textarea:focus {
     margin: 1rem 0;
   }
 }
+
+/*==================== RESPONSIVE MEDIA QUERIES ====================*/
+@media screen and (max-width: 768px) {
+  /* Adjust project containers */
+  .project-container {
+    flex-direction: column;
+    margin: 2%;
+  }
+
+  /* Resize project images */
+  .image {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  /* Adjust project info padding */
+  .project_info {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Certification navigation buttons */
+  #certification .prev {
+    left: 10px;
+  }
+  #certification .next {
+    right: 10px;
+  }
+
+  /* Reduce image size in certifications */
+  #certification .image {
+    width: 90%;
+    max-width: 350px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Further reduce image sizes */
+  .image {
+    max-width: 300px;
+  }
+
+  /* Adjust home section padding */
+  #home {
+    padding-top: 10rem;
+    padding-left: 1rem;
+  }
+
+  /* Smaller certification images */
+  #certification .image {
+    max-width: 250px;
+  }
+
+  /* Adjust project margins */
+  .my_project {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+/* Make all images responsive by default */
+.image {
+  width: 100%;
+  max-width: 45rem; /* Maintains original size on large screens */
+}
+
+.image__img {
+  width: 100%;
+  height: auto;
+}
