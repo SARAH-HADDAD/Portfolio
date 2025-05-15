@@ -182,3 +182,112 @@ function changeSlide(n, slideshowType) {
     dots[slideIndex - 1].className += " active";
   }
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  // ========== Typed.js Animations ==========
+  new Typed('#typeit-quote', {
+    strings: ['a Computer Vision Engineer', 'a Machine Learning Engineer', 'an AI Enthusiast'],
+    typeSpeed: 50,
+    smartBackspace: true,
+    backSpeed: 35,
+    backDelay: 1000,
+    cursorChar: '&#x25AE;',
+    loop: true,
+    loopCount: Infinity,
+  });
+
+  new Typed('#typeit-quote-head', {
+    strings: ['Sarah Haddad', ''],
+    typeSpeed: 10,
+    smartBackspace: true,
+    backSpeed: 1000,
+    backDelay: 5000,
+    cursorChar: '&#x25AE;',
+    loop: true,
+    loopCount: Infinity,
+  });
+
+  // ========== General Slideshow ==========
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+  }
+
+  window.plusSlides = plusSlides;
+  window.currentGeneralSlide = function(n) {
+    showSlides(slideIndex = n);
+  };
+
+  // ========== Certification Slideshow ==========
+  let certificationSlideIndex = 1;
+  changeCertificationSlide(0);
+
+  function changeCertificationSlide(n) {
+    certificationSlideIndex += n;
+    let slides = document.getElementsByClassName("certificationSlides");
+    let dots = document.getElementsByClassName("certificationDot");
+
+    if (certificationSlideIndex > slides.length) { certificationSlideIndex = 1 }
+    if (certificationSlideIndex < 1) { certificationSlideIndex = slides.length }
+
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (let i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    slides[certificationSlideIndex - 1].style.display = "block";
+    dots[certificationSlideIndex - 1].className += " active";
+  }
+
+  window.changeCertificationSlide = changeCertificationSlide;
+  window.currentCertificationSlide = function(n) {
+    certificationSlideIndex = n;
+    changeCertificationSlide(0);
+  };
+
+  // ========== Modal Handling ==========
+  const modal = document.getElementById('contactFormModal');
+  const footerBtn = document.querySelector('.footer-btn');
+  const contactMeBtn = document.getElementById('ContactME');
+  const closeModal = document.getElementById('closeModal');
+
+  if (modal) modal.style.display = 'none';
+
+  if (footerBtn) {
+    footerBtn.onclick = () => modal.style.display = 'block';
+  }
+
+  if (contactMeBtn) {
+    contactMeBtn.onclick = () => modal.style.display = 'block';
+  }
+
+  if (closeModal) {
+    closeModal.onclick = () => modal.style.display = 'none';
+  }
+
+  window.onclick = function (event) {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  }
+});

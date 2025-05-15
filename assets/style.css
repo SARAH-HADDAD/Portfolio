@@ -775,22 +775,35 @@ button:focus {
   position: relative;
   max-width: 800px;
   margin: 2rem auto;
+  padding: 0 2rem; /* adds horizontal padding for spacing */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #certification .certification-slides {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#certification .slides {
+  width: 100%;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-#certification .slides {
-  width: 100%;
-  position: relative;
-}
-
 #certification .prev, 
 #certification .next {
+  background-color: rgba(0, 0, 0, 0.5); /* optional: for better visibility */
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -798,17 +811,18 @@ button:focus {
 }
 
 #certification .prev {
-  left: -60px;
+  left: -50px; /* a little further left */
 }
 
+
 #certification .next {
-  right: -60px;
+  right: -50px; /* a little further right */
 }
 
 #certification .image__img {
   max-height: 500px;
   object-fit: contain;
-  margin: 0 auto;
+  margin: 0 auto 1.5rem auto; /* add bottom margin of 1.5rem */
 }
 
 /* FOOTER SECTION */
