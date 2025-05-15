@@ -526,9 +526,6 @@ button:focus {
   transition: background-color 0.3s;
 }
 
-.path__button:hover {
-  background-color: rgba(255, 255, 255, 0.05);
-}
 
 .path__button.path__active .path__section {
   color: var(--Primary);
@@ -633,7 +630,6 @@ button:focus {
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
-  background-color: rgba(0, 0, 0, 0.2);
   z-index: 10;
 }
 
@@ -645,7 +641,7 @@ button:focus {
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 /* The dots/bullets/indicators */
@@ -686,7 +682,6 @@ button:focus {
   margin: 0 auto;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .image__img {
