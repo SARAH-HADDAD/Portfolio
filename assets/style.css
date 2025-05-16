@@ -477,7 +477,7 @@ button:focus {
   flex-direction: row;
 }
 
-.path__calendar i {
+.path__calendar object {
   margin-right: 10px;
 }
 
