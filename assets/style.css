@@ -924,9 +924,21 @@ footer {
   transition: all 0.3s ease;
 }
 
+
 .social-wrapper a:hover {
   transform: scale(1.1);
   background-color: rgba(255, 255, 255, 0.1);
+}
+/* Style for the social icons */
+.social-icon {
+  height: 60%;
+  width: 60%;
+  transition: filter 0.3s ease;
+}
+
+.social-wrapper a:hover .social-icon {
+  filter: invert(71%) sepia(72%) saturate(1672%) hue-rotate(131deg) brightness(95%) contrast(101%);
+  /* This filter better approximates the color change to var(--Secondary) #03dac6 */
 }
 
 .social-wrapper a:hover svg path {
