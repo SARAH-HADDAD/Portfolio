@@ -148,7 +148,7 @@ nav {
 }
 
 .nav__link:hover {
-  color: var(--Primary);
+  color: var(--Secondary);
 }
 
 .nav__link:active,
@@ -370,7 +370,10 @@ button:focus {
   margin-left: auto;
   transition: transform 0.4s;
 }
-
+/* Skills arrow */
+.skills__arrow:hover {
+  color: var(--Secondary);
+}
 .skills__titles {
   display: flex;
   justify-content: space-between;
@@ -526,14 +529,20 @@ button:focus {
   transition: background-color 0.3s;
 }
 
-.path__button.path__active .path__section,
-.path__button:hover .path__section {
+.path__button.path__active .path__section
+{
   color: var(--Primary);
 }
+.path__button:hover .path__section {
+  color: var(--Secondary);
+}
 
-.path__button.path__active .path__icon path,
-.path__button:hover .path__icon path {
+.path__button.path__active .path__icon path
+{
   fill: var(--Primary);
+}
+.path__button:hover .path__icon path {
+  fill: var(--Secondary);
 }
 
 .path__icon {
@@ -586,7 +595,11 @@ button:focus {
   transition: color 0.3s;
 }
 
-.path__button:hover .path-svg-icon,
+.path__button:hover .path-svg-icon {
+  color: var(--Secondary);
+  filter: invert(71%) sepia(72%) saturate(1672%) hue-rotate(131deg) brightness(95%) contrast(101%);
+}
+
 .path__button.path__active .path-svg-icon {
   color: var(--Primary);
   filter: invert(52%) sepia(99%) saturate(1264%) hue-rotate(232deg) brightness(97%) contrast(96%);
@@ -600,12 +613,10 @@ button:focus {
 
 
 .slideshow-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: relative;
   max-width: 1200px;
   margin: 0 auto;
-  position: relative;
+  padding: 0 50px; /* Make space for arrows */
 }
 
 .slider-content,
@@ -613,9 +624,8 @@ button:focus {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin: 5%;
   width: 100%;
 }
 
@@ -634,19 +644,26 @@ button:focus {
 /* Navigation arrows */
 .prev,
 .next {
-  position: relative;
-  margin: 1rem;
-  left: 0;
-  right: 0;
-  transform: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(18, 18, 18, 0.7);
+  padding: 15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
 }
 
 .prev {
-  left: -50px;
+  left: 0;
 }
 
 .next {
-  right: -50px;
+  right: 0;
 }
 
 .next {
@@ -676,9 +693,11 @@ button:focus {
   transition: background-color 0.6s ease;
 }
 
-.dot.active,
-.dot:hover {
+.dot.active{
   background-color: var(--Primary);
+}
+.dot:hover {
+  background-color: var(--Secondary);
 }
 
 /* Fade animation */
@@ -698,9 +717,8 @@ button:focus {
 }
 
 .image {
-  position: relative;
   width: 100%;
-  max-width: 45rem;
+  max-width: 800px;
   margin: 0 auto;
   border-radius: 10px;
   overflow: hidden;
@@ -810,7 +828,12 @@ button:focus {
 
 .project_info a:hover .social-icon {
   transform: scale(1.2);
-  filter: brightness(1.2);
+  filter: invert(71%) sepia(72%) saturate(1672%) hue-rotate(131deg) brightness(95%) contrast(101%);
+}
+
+.project_info a:hover svg path {
+  fill: var(--Secondary);
+  transition: fill 0.3s ease;
 }
 
 /* Certification Page Specific Styles */
@@ -1002,9 +1025,7 @@ footer {
 
 .close-button:hover,
 .close-button:focus {
-  color: var(--Primary);
-  text-decoration: none;
-  cursor: pointer;
+  color: var(--Secondary);
 }
 
 .modal-content h2 {
@@ -1040,9 +1061,9 @@ textarea {
 
 input:focus,
 textarea:focus {
-  border-color: var(--Primary);
+  border-color: var(--Secondary);
   outline: none;
-  box-shadow: 0 0 0 2px rgba(187, 134, 252, 0.2);
+  box-shadow: 0 0 0 2px rgba(3, 218, 198, 0.2);
 }
 
 textarea {
@@ -1105,9 +1126,21 @@ textarea {
     font-size: 1.8rem;
   }
 
-  .project-container {
-    flex-direction: column;
-    margin: 2%;
+  .slideshow-container {
+    padding: 0 40px;
+  }
+
+    .prev, .next {
+    padding: 10px;
+  }
+
+    .nav-arrow {
+    width: 30px;
+    height: 35px;
+  }
+  
+    #certification .image__img {
+    max-height: 400px;
   }
 
   .image {
@@ -1116,12 +1149,6 @@ textarea {
 
   .project_info {
     padding: 0 1rem;
-  }
-
-
-
-  #certification .image {
-    max-width: 90%;
   }
 
   .my_project {
@@ -1183,12 +1210,41 @@ textarea {
     font-size: 0.8rem;
   }
 
+   .slideshow-container {
+    padding: 0 30px;
+  }
+  
+  .prev, .next {
+    padding: 8px;
+  }
+  
+  .nav-arrow {
+    width: 25px;
+    height: 30px;
+  }
+  
   #certification .image__img {
-    max-height: 350px;
+    max-height: 300px;
   }
 
   .modal-content {
     margin: 20% auto;
     padding: 1.5rem;
   }
+}
+
+/* All social icons */
+.social-wrapper a:hover .social-icon,
+.project_info a:hover .social-icon,
+.nav__social a:hover .social-icon,
+.social-links a:hover .social-icon {
+  filter: invert(71%) sepia(72%) saturate(1672%) hue-rotate(131deg) brightness(95%) contrast(101%);
+}
+
+/* All SVG paths */
+.social-wrapper a:hover svg path,
+.project_info a:hover svg path,
+.nav__social a:hover svg path,
+.social-links a:hover svg path {
+  fill: var(--Secondary);
 }
