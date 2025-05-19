@@ -22,10 +22,10 @@
   --h5-font-size: 1rem;
   --normal-font-size: 0.9rem;
   --small-font-size: 0.8rem;
-  --smaller-font-size: 0.75rem;
 }
 
 /*==================== REUSABLE CSS CLASSES ====================*/
+/*==================== BASE CSS ====================*/
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -35,6 +35,16 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+body {
+  background-color: var(--Background);
+  color: var(--on);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 h1 {
@@ -59,16 +69,6 @@ p {
   font-size: var(--normal-font-size);
   color: var(--on-medium);
   line-height: 2;
-}
-
-body {
-  background-color: var(--Background);
-  color: var(--on);
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
 }
 
 ul {
@@ -151,7 +151,8 @@ nav {
   color: var(--Primary);
 }
 
-.nav__link:active, .nav__link.active-link {
+.nav__link:active,
+.nav__link.active-link {
   color: var(--Primary);
 }
 
@@ -166,7 +167,8 @@ nav {
   transition: width 0.3s ease;
 }
 
-.nav__link:hover:after, .nav__link.active-link:after {
+.nav__link:hover:after,
+.nav__link.active-link:after {
   width: 100%;
 }
 
@@ -193,10 +195,6 @@ nav {
 
 .nav__logo:hover {
   transform: scale(1.05);
-}
-
-.scroll-header {
-  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* Mobile Menu Toggle Button */
@@ -234,7 +232,7 @@ nav {
   transform: rotate(-45deg) translate(7px, -6px);
 }
 
-/* Show the toggle button on mobile screens */
+/* Mobile responsive nav */
 @media screen and (max-width: 767px) {
   .mobile-menu-toggle {
     display: flex;
@@ -261,12 +259,13 @@ nav {
   .nav__item {
     margin: 1.5rem 0;
   }
-  
+
   .nav__logo {
     margin-left: 1rem;
   }
 }
 
+/*==================== HOME ====================*/
 /*==================== HOME ====================*/
 #home {
   padding-top: 15rem;
@@ -311,6 +310,7 @@ button:focus {
   color: var(--Secondary);
 }
 
+/*==================== SKILLS ====================*/
 /*==================== SKILLS ====================*/
 .skills__container {
   padding-top: 15px;
@@ -371,7 +371,6 @@ button:focus {
   transition: transform 0.4s;
 }
 
-/* The percentage of every skill */
 .skills__titles {
   display: flex;
   justify-content: space-between;
@@ -411,12 +410,21 @@ button:focus {
   margin-bottom: 0.5rem;
 }
 
-.number40 {
-  width: 40%;
+/* Skill percentages */
+.number20 {
+  width: 20%;
+}
+
+.number30 {
+  width: 30%;
 }
 
 .number35 {
   width: 35%;
+}
+
+.number40 {
+  width: 40%;
 }
 
 .number45 {
@@ -434,19 +442,12 @@ button:focus {
 .number70 {
   width: 70%;
 }
+
 .number80 {
   width: 80%;
 }
 
-.number20 {
-  width: 20%;
-}
-
-.number30 {
-  width: 30%;
-}
-
-/*==================== Path ====================*/
+/*==================== PATH ====================*/
 .path__tabs {
   display: flex;
   justify-content: center;
@@ -491,12 +492,11 @@ button:focus {
 
 .path__line {
   display: block;
-  width: 2px; /* Slightly thicker for better visibility */
+  width: 2px;
   height: 100%;
   background-color: var(--Primary);
-  margin: 0 auto; /* This centers the line in the 10px column */
+  margin: 0 auto;
 }
-
 
 .path [data-content] {
   display: none;
@@ -526,19 +526,12 @@ button:focus {
   transition: background-color 0.3s;
 }
 
-
-.path__button.path__active .path__section {
-  color: var(--Primary);
-}
-
-.path__button.path__active .path__icon path {
-  fill: var(--Primary);
-}
-
+.path__button.path__active .path__section,
 .path__button:hover .path__section {
   color: var(--Primary);
 }
 
+.path__button.path__active .path__icon path,
 .path__button:hover .path__icon path {
   fill: var(--Primary);
 }
@@ -557,21 +550,19 @@ button:focus {
   grid-column-gap: 2rem;
 }
 
-.path__data h5 {
+.path__data h5,
+.path__data h4,
+.path__data p {
   margin: 0;
   padding: 0;
+}
+
+.path__data h5 {
   color: var(--on-medium);
 }
 
 .path__data h4 {
-  margin: 0;
-  padding: 0;
   color: var(--Primary);
-}
-
-.path__data p {
-  margin: 0;
-  padding: 0;
 }
 
 .path__sections {
@@ -586,8 +577,28 @@ button:focus {
   align-items: center;
 }
 
+.path-svg-icon {
+  pointer-events: none;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  color: var(--Disabled);
+  transition: color 0.3s;
+}
+
+.path__button:hover .path-svg-icon,
+.path__button.path__active .path-svg-icon {
+  color: var(--Primary);
+  filter: invert(52%) sepia(99%) saturate(1264%) hue-rotate(232deg) brightness(97%) contrast(96%);
+}
+
+.path-svg-icon svg * {
+  fill: currentColor;
+}
+
 /*==================== PROJECTS ====================*/
-/* Slideshow container */
+
+
 .slideshow-container {
   display: flex;
   flex-direction: column;
@@ -597,6 +608,7 @@ button:focus {
   position: relative;
 }
 
+.slider-content,
 .project-container {
   display: flex;
   flex-direction: row;
@@ -607,44 +619,52 @@ button:focus {
   width: 100%;
 }
 
-/* Hide the images by default */
-.mySlides {
-  display: none;
+.slides {
+  width: 100%;
+  position: relative;
 }
 
+.project-slide,
+.certification-slide,
+.mySlides,
 .certificationSlides {
   display: none;
 }
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: auto;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  z-index: 10;
+/* Navigation arrows */
+.prev,
+.next {
+  position: relative;
+  margin: 1rem;
+  left: 0;
+  right: 0;
+  transform: none;
 }
 
-/* Position the "next button" to the right */
+.prev {
+  left: -50px;
+}
+
+.next {
+  right: -50px;
+}
+
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(255, 255, 255, 0.05);
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* The dots/bullets/indicators */
+/* Dots container */
+.dots-container {
+  text-align: center;
+  padding: 1rem 0;
+}
+
 .dot {
   cursor: pointer;
   height: 15px;
@@ -656,11 +676,12 @@ button:focus {
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.dot.active,
+.dot:hover {
   background-color: var(--Primary);
 }
 
-/* Fading animation */
+/* Fade animation */
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
@@ -670,6 +691,7 @@ button:focus {
   from {
     opacity: 0.4;
   }
+
   to {
     opacity: 1;
   }
@@ -693,6 +715,7 @@ button:focus {
 
 .image:hover .image__img {
   transform: scale(1.05);
+  will-change: transform;
 }
 
 .image__overlay {
@@ -717,7 +740,7 @@ button:focus {
   backdrop-filter: blur(5px);
 }
 
-.image__overlay > * {
+.image__overlay>* {
   transform: translateY(20px);
   transition: transform 0.3s;
 }
@@ -726,7 +749,7 @@ button:focus {
   opacity: 1;
 }
 
-.image__overlay:hover > * {
+.image__overlay:hover>* {
   transform: translateY(0);
 }
 
@@ -765,59 +788,38 @@ button:focus {
   transform: scale(1.2);
 }
 
+/* Navigation arrows */
+.nav-arrow {
+  width: 40px;
+  height: 45px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.prev:hover .nav-arrow,
+.next:hover .nav-arrow {
+  transform: scale(1.1);
+}
+
+/* Social icons */
+.social-icon {
+  width: 45px;
+  height: 45px;
+  transition: transform 0.3s ease;
+}
+
+.project_info a:hover .social-icon {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
 /* Certification Page Specific Styles */
-#certification .slideshow-container {
-  position: relative;
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 0 2rem; /* adds horizontal padding for spacing */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-#certification .certification-slides {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-#certification .slides {
-  width: 100%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#certification .prev, 
-#certification .next {
-  background-color: rgba(0, 0, 0, 0.5); /* optional: for better visibility */
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  font-size: 1.5rem;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-}
-
-#certification .prev {
-  left: -50px; /* a little further left */
-}
-
-
-#certification .next {
-  right: -50px; /* a little further right */
-}
 
 #certification .image__img {
   max-height: 500px;
   object-fit: contain;
-  margin: 0 auto 1.5rem auto; /* add bottom margin of 1.5rem */
+  margin: 0 auto 1.5rem auto;
 }
 
 /* FOOTER SECTION */
@@ -924,13 +926,12 @@ footer {
   transition: all 0.3s ease;
 }
 
-
 .social-wrapper a:hover {
   transform: scale(1.1);
   background-color: rgba(255, 255, 255, 0.1);
 }
-/* Style for the social icons */
-.social-icon {
+
+.social-wrapper img.social-icon {
   height: 60%;
   width: 60%;
   transition: filter 0.3s ease;
@@ -938,7 +939,6 @@ footer {
 
 .social-wrapper a:hover .social-icon {
   filter: invert(71%) sepia(72%) saturate(1672%) hue-rotate(131deg) brightness(95%) contrast(101%);
-  /* This filter better approximates the color change to var(--Secondary) #03dac6 */
 }
 
 .social-wrapper a:hover svg path {
@@ -983,6 +983,7 @@ footer {
     opacity: 0;
     transform: translateY(-50px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -1024,7 +1025,8 @@ label {
   margin-bottom: 0.5rem;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 0.8rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -1036,7 +1038,8 @@ input, textarea {
   transition: border-color 0.3s;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   border-color: var(--Primary);
   outline: none;
   box-shadow: 0 0 0 2px rgba(187, 134, 252, 0.2);
@@ -1070,15 +1073,15 @@ textarea {
   .skills__container {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .path__content.path__active {
     grid-template-columns: 1fr;
   }
-  
+
   .line__rounder {
     display: none;
   }
-  
+
   .path__data {
     margin-bottom: 2rem;
   }
@@ -1088,50 +1091,43 @@ textarea {
   section {
     padding-top: 5rem;
   }
-  
+
   #home {
     padding-top: 8rem;
     padding-left: 1.5rem;
   }
-  
+
   h1 {
     font-size: 2.5rem;
   }
-  
+
   h2 {
     font-size: 1.8rem;
   }
-  
+
   .project-container {
     flex-direction: column;
     margin: 2%;
   }
-  
+
   .image {
     max-width: 90%;
   }
-  
+
   .project_info {
     padding: 0 1rem;
   }
-  
-  #certification .prev, 
-  #certification .next {
-    position: relative;
-    margin: 1rem;
-    left: 0;
-    right: 0;
-    transform: none;
-  }
-  
+
+
+
   #certification .image {
     max-width: 90%;
   }
-  
+
   .my_project {
     margin: 0 auto;
   }
-  
+
   .footer-container .container .footer-text h2 {
     font-size: 1.5rem;
   }
@@ -1141,52 +1137,56 @@ textarea {
   .skills__container {
     grid-template-columns: 1fr;
   }
-  
+
   #home {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  
+
   h1 {
     font-size: 2rem;
   }
-  
+
   h2 {
     font-size: 1.5rem;
   }
-  
+
   .path__tabs {
     gap: 1rem;
   }
-  
+
   .path__button {
     padding: 0.3rem 0.5rem;
   }
-  
+
+  /* The text section already has good styling, but let's make sure it's consistent */
   .path__section {
-    font-size: 0.8rem;
+    color: var(--Disabled);
+    transition: color 0.3s;
+    margin: 0;
+    padding: 0;
   }
-  
+
   .image {
     max-width: 100%;
   }
-  
+
   .project_info {
     padding: 0 0.5rem;
   }
-  
+
   .project_info h3 {
     font-size: 1.1rem;
   }
-  
+
   .project_info p {
     font-size: 0.8rem;
   }
-  
+
   #certification .image__img {
     max-height: 350px;
   }
-  
+
   .modal-content {
     margin: 20% auto;
     padding: 1.5rem;
