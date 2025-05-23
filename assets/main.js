@@ -102,7 +102,28 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initialize Typed.js effects
   initTypedEffects();
 });
+document.querySelectorAll('.nav__link').forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth < 768) {
+      domElements.navList.classList.remove('active');
+      domElements.toggleButton.classList.remove('active');
+    }
+    
+    // Update active link
+    document.querySelectorAll('.nav__link').forEach(navLink => {
+      navLink.classList.remove('active-link');
+    });
+    link.classList.add('active-link');
+  });
+});
 
+// Close menu on window resize to desktop
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 767) {
+    domElements.navList.classList.remove('active');
+    domElements.toggleButton.classList.remove('active');
+  }
+});
 /**
  * Initialize all sliders on the page
  */
